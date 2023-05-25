@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+:root {
+  --white: #fff;
+  --black: #24292d;
+  --nav-main: #4070f4;
+  --switchers-main: #0b3cc1;
+  --light-bg: #f0f8ff;
+}
+
+#logo {
+  width: 185px;
+  height: auto;
+}
+nav {
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  background: var(--nav-main);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+nav .navbar {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 30px;
+  justify-content: space-between;
+}
+nav .navbar a {
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--white);
+  text-decoration: none;
+}
+.navbar .nav-links {
+  display: flex;
+}
+.navbar .nav-links li {
+  margin: 0 8px;
+  list-style: none;
+  display: flex;
+}
+.navbar .nav-links a {
+  font-size: 18px;
+  font-weight: 400;
+  opacity: 1;
+}
+.navbar .nav-links a:hover {
+  opacity: 1;
+}
+.navbar .appearance {
+  display: flex;
+  align-items: center;
+}
+li {
+  transition: .5s;
+}
+li:hover {
+  transform: scale(1.10);
+}
+.appearance .light-dark,
+.appearance .icons {
+  height: 50px;
+  width: 50px;
+  border-radius: 6px;
+  line-height: 50px;
+  text-align: center;
+  color: var(--white);
+  font-size: 20px;
+  background: var(--switchers-main);
+  cursor: pointer;
+  display: none;
+}
+.appearance .light-dark i,
+.appearance .icons i {
+  opacity: 1;
+}
+.appearance .light-dark:hover i,
+.appearance .icons:hover i {
+  opacity: 1;
+}
+.appearance .light-dark:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.appearance .light-dark i {
+  height: 100%;
+  width: 100%;
+}
+.appearance .color-icon {
+  position: relative;
+}
+.appearance .icons {
+  width: 70px;
+  height: 50px;
+  margin-left: 14px;
+}
+.appearance .color-box {
+  position: absolute;
+  bottom: -133px;
+  right: 0;
+  min-height: 100px;
+  background: var(--white);
+  padding: 16px 20px 20px 20px;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+}
+.color-box::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: var(--white);
+  transform: rotate(45deg);
+}
+.color-icon.open .color-box {
+  opacity: 1;
+  pointer-events: auto;
+}
+.color-icon.open .arrow {
+  transform: rotate(-180deg);
+}
+.appearance .color-box h3 {
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  color: var(--nav-main);
+  text-align: left;
+  white-space: nowrap;
+  margin-bottom: 10px;
+}
+.appearance .color-box .color-switchers {
+  display: flex;
+}
+.color-box .color-switchers .btn {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  background: #4070f4;
+}
+.color-switchers .btn.blue.active {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #4070f4;
+}
+.color-switchers .btn.orange {
+  background: #f79f1f;
+}
+.color-switchers .btn.orange.active {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #f79f1f;
+}
+.color-switchers .btn.purple {
+  background: #8e44ad;
+}
+.color-switchers .btn.purple.active {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #8e44ad;
+}
+.color-switchers .btn.green {
+  background: #3a9943;
+}
+.color-switchers .btn.green.active {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #3a9943;
+}
+
+.home-content{
+  height: 100vh;
+  width: 100%;
+  background: var(--light-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 60px;
+}
+.home-content p {
+    color: var(--black);
+    font-size: 13px;
+    width: 70%;
+    text-align: justify;
+    margin: 4px 0 30px 0;
+  }
+
+.event-information {
+    width: 90%;
+    height: 375px;
+    margin-top: 180px;
+    margin-left: 70px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+}
+.img {
+  width: 25%;
+  height: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url(./IMG/inovatech.jpg);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 1s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px 0 20px 20px;
+  border: 1px solid black;
+}
+img:hover {
+    transform: scale(1.02);
+}
+.information {
+    width: 40%;
+    height: 100%;
+}
+.information h2 {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--nav-main);
+}
+.information h3 {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--nav-main);
+}
+
+.local {
+    margin-top: 20px;
+    margin-left: 70px;
+}
+.local h2 {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--nav-main);
+}
+.local h3 {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--black);
+}
+.local a {
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  background: var(--nav-main);
+}
+.local a i {
+  font-size: 16px;
+}
+.local a:hover {
+  background: var(--switchers-main);
+}
+.button {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1050px) {
+  .home-content p {
+    width: 70%;
+  }
+}
+
+
+footer {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background: var(--nav-main);
+  color: white;
+}
+
+.inst {
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
+}
+.inst:hover {
+  font-size: 115%;
+}
+
+@media (max-width: 768px) {
+    #logo {
+      width: 200px;
+      height: 75px;
+      margin-top: 5px;
+    }
+    .navbar .nav-links {
+      display: flex;
+      flex-direction: row;
+      column-gap: 40px;
+    }
+    .navbar {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      right: 3px;
+    }
+    nav{
+      height: 120px;
+    }
+    .appearance .light-dark,
+    .appearance .icons {
+      display: none;
+    }
+    .home-content {
+      display: flex;
+      flex-direction: column;
+      height: 150vh;
+      padding: 0 0;
+    }
+    .event-information {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 150px;
+      margin-left: 0;
+    }
+    .img {
+      width: 90%;
+      height: 100%;
+    }
+    .information {
+      width: 90%;
+      text-align: center;
+      margin-top: 15px;
+    }
+    .information p {
+      width: 95%;
+      font-size: 16px;
+    }
+
+    .local {
+      width: 90%;
+      margin-left: 27px;
+      margin-bottom: 300px;
+    }
+  
+    footer span {
+      text-align: center;
+    }
+  }
