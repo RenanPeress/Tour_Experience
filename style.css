@@ -330,6 +330,7 @@ footer {
   }
   .img {
     margin-top: 50px;
+    display: none;
   }
   .world {
     margin-top: 0;
@@ -338,6 +339,7 @@ footer {
     position: relative;
     left: 100px;
     bottom: 30px;
+    display: none;
   }
   footer span {
     text-align: center;
